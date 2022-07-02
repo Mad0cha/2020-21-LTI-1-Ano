@@ -1,0 +1,171 @@
+/* ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24 */
+
+/* Background exterior */
+#content_pokemon{
+    width:100%;
+    height:100%;
+
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 6% 90% 4%;
+}
+
+#titulo{
+    grid-column: 2;
+    grid-row: 1;
+    text-align:center;
+}
+
+/* Container onde estão as caixas todas */
+#container_pokemon{
+	grid-column: 2;
+    grid-row: 2;
+
+    width:100%;
+    height:100%;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 18% 18% 18% 18% 18%;
+    grid-row-gap:6vh;
+}
+
+/* Caixas individuais  */
+.caixa{
+	background:#f6f6f6;
+	border-radius:1.5vh;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgb(0 0 0 / 19%) 0px 30px 60px -30px;
+   
+	width:110vh;
+    height:30vh;
+
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows:100%;
+    padding:5vh;
+}
+
+/* Posicionamento de cada caixa de cada Pokémon */
+#pikachu{
+	grid-column: 1;
+    grid-row: 1;
+}
+
+#bulbassaur{
+	grid-column: 1;
+    grid-row: 2;
+}
+
+#charmander{
+	grid-column: 1;
+    grid-row: 3;
+}
+
+#squirtle{
+	grid-column: 1;
+    grid-row: 4;
+}
+
+#eevee{
+	grid-column: 1;
+    grid-row: 5;
+}
+
+/* Div da informação dos Pokémons */
+.informacao{
+    margin-top:-6.5vh;
+}
+
+.nome{ /* Posicionamento do nome do Pokémon */
+	grid-column: 1;
+    grid-row: 1;
+
+	margin-bottom:-3vh;
+    background: transparent;
+}
+
+
+.nome:hover{ /* Posicionamento do nome do PokÃ©mon */
+	-webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+}
+
+h2.nome { /* Tamanho nome do Pokémon */
+	font-size: 12vh;
+}
+
+.tipo{ /* Tipo de natureza */
+    color: grey;
+    font-weight:600;
+    font-size: 3vh;
+}
+
+.mais{  /* + informações */
+	margin-top:-2vh;
+	font-size:1.8vh;
+}
+
+.mais:hover{  
+	color: rgb(160, 160, 160);
+}
+
+.imagem{ /* Imagem do Pokémon */
+	grid-column: 2;
+    grid-row: 1;
+
+	width:40vh;
+	margin-top:-9vh;
+}
+
+.imagem:hover {   /* Aumentar os Pokémons */
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+@media screen and (max-width : 1000px){
+    
+    /* Background exterior */
+    #content_pokemon{
+        grid-template-columns: 1% auto 1%;
+    }
+
+    h1{ /* Titulo */
+        font-size: 4vh;
+        margin-left:5vh;
+    }
+
+    /* Caixas individuais  */
+    .caixa{
+        width:96vh;
+        height:20vh;
+    }
+
+    /* Div da informação dos Pokémons */
+    .informacao{
+        margin-top:-4vh;
+    }
+
+    .nome{   /* Posicionamento do nome do Pokémon */
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    h2.nome{ /* Tamanho nome do Pokémon */
+        font-size:7.4vh;
+    }
+
+    .imagem{ /* Imagem do Pokémon */
+        width:31vh;
+        margin-top:-8vh;
+    }
+}
+
+@media screen and (max-width : 600px){
+   
+    /* Caixas individuais  */
+    .caixa{
+        width:65vh;
+    }
+}

@@ -1,0 +1,68 @@
+/* ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24 */
+
+/* Caixa branca */
+#container_pontuacao{ 
+    background-color: #f6f6f6;
+    background-size: 100% 100%;
+    border-radius:1.5vh;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgb(0 0 0 / 16%) 0px 30px 60px -30px;
+}
+
+.main {   /* Caixa interior com os conteúdos */
+    width: 60%;
+    height:70vh;
+
+    padding: 2vh;
+    margin: auto;
+    margin-top:3vh;
+}
+
+/*Titulo*/
+h1{
+    margin-top:-2vh;
+}
+
+/*Tabela*/
+table { 
+    margin: auto;
+    width: 10%;
+    font-size:clamp(0.5vh, 1.5vh + 1.5vw, 3vh);
+}
+
+.tabelaPontuacoes {
+    width: 70%;
+    border-radius: 1.5vh;
+}
+
+th {    /* Header da tabela */
+    text-transform: uppercase;
+    border-bottom: 0.3vh solid #fed347;                 /* ARRANJAR CORES E RESPONSIVO */
+    font-size:clamp(1vh, 2vh + 3vw, 3.5vh);
+}
+
+th,td{  /* Header + linhas */
+    padding: 2vh;
+    text-align: center;
+    color: gray;
+}
+
+/*Responsivo*/
+@media screen and (max-width: 1000px){
+    
+    .main{
+        width: 90%;
+    }
+
+    th{
+        font-size:clamp(1vh, 2vh + 3vw, 3.5vh);
+    }
+}
+
+
+@media screen and (max-width: 450px){
+
+    th{
+        font-size:clamp(1vh, 2vh + 2vw, 2.2vh);
+    }
+}
+

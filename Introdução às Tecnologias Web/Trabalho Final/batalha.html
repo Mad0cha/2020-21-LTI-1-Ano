@@ -1,0 +1,128 @@
+<!--ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24-->
+
+<!DOCTYPE html>
+<html lang="PT">
+    
+  <head>
+        <meta charset="UTF-8"/>
+
+        <title>Catch'em All!</title>
+        <link rel="icon" href="images/pikachu.png" type="image">
+
+        <!--Viewports-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Páginas CSS -->
+        <link rel = "stylesheet" type = "text/css" href = "styles/comum.css"/>
+        <link rel = "stylesheet" type = "text/css" href = "styles/batalha.css"/>
+        <link rel = "stylesheet" type = "text/css" href = "styles/definicoes.css"/>
+        <link rel="stylesheet" href="styles/jogo.css">  
+
+        <!-- Páginas JS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+        <script src="scripts/batalha.js"></script> 
+        <script src="scripts/auxiliares.js"></script>     
+    </head>
+
+    <body>
+      <div>
+        <!--O jogo vai-se passar dentro deste div-->
+        <div id="botao_definicoes" class="sidebar">
+            <a id="botao_fechar">&times;</a>
+            <h2 class="side">Definições</h2>
+        
+            <div id="container_definicoes" class="main">   <!-- Caixa interior com o conteúdo -->
+
+                <h2 class="side">Volume</h2>
+                <h3> Música de fundo </h3>
+                <div class="escolheVolumeMusica">
+                    <div class="controloDoVolume">
+                        <p>0<input class="volume slider" id="myRange" type="range" value="100" min="0" max="100" id="myRange">100</p>
+                    </div>
+                </div>
+                
+                <h3> Efeitos sonoros </h3>
+                <div class="escolheVolumeSom">
+                    <div class="controloDoVolume">
+                        <p>0<input class="volume slider" type="range" value="100" min="0" max="100" id="myRange">100</p>
+                    </div>
+                </div>
+
+                <br>
+                <a id="menuPrincipal">Menu Principal</a>
+            </div>
+        </div>
+
+        <div id="alerta3" class="alertas">
+          <p>Parabéns conseguiu derrotar o seu adversário!!</p>
+          <button id="btnContinuarJogo" class="btnContinuar"> Continuar! </button>
+        </div>
+  
+      <div id="alerta4" class="alertas">
+          <p>Infelizmente perdeu o jogo!</p>
+          <button id="btnContinuarFim" class="btnContinuar"> Continuar! </button>
+      </div>
+
+        <div id="caixa_definicoes">
+            <button id="botao_abrir"><img id = "definicoes" src="images/roda-dentada.png"></button>
+        </div>
+
+        <div class="container_batalha">   <!-- Caixa exterior -->
+
+          <div class="jogo_batalha">  <!-- Caixa interior com os conteúdos -->
+  
+            <div class="batalha"> <!-- Caixa com a batalha -->
+  
+              <div class="vida adversario"> <!-- Vida do adversário -->
+                <p id="nomeOponente" class="nome_adversario"></p>
+                <div class="contador_vida">
+                  <p><img src="images/like.png" alt="Coração">HP: <span id="vidaAdversario"></span></p>
+                </div>
+              </div>
+  
+              <div class="vida buddy">  <!-- Vida do Pokémon do utilizador -->
+                <p id="nomeJogador" class="nome_buddy"></p>
+                <div class="contador_vida"> 
+                  <p><img src="images/like.png" alt="Coração">HP: <span id="vidaJogador"></span></p>
+                </div>
+              </div>
+  
+              <div class="imagem_buddy" id="imgJogador">  <!-- Gif do Pokémmon do utilizador -->
+              </div>
+  
+              <div id="imgOponente" class="imagem_adversario"> <!-- Gif do Pokémon adversário --> 
+              </div>
+  
+            </div>
+  
+            <div class="botoes">  <!-- Botões em baixo da caixa de batalha -->
+  
+              <div class="botoes_todos">
+                <button id="ataque_0" class="botao_ataque" ></button>
+                <button id="ataque_1" class="botao_ataque"></button>
+                <button id="ataque_2" class="botao_ataque"> </button>
+                <button id="ataque_3" class="botao_ataque"> </button>
+              </div>
+              
+              <div class="ataque">
+                <div class="mensagem">
+                  <p id = "mensagem"></p>
+                </div>
+                <div class="continuar">
+                  <button id ="botao_ataque" class="botao_ataque">Continuar</button>
+                </div>
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+
+    </div>
+
+    </body>
+
+</html>
+
+

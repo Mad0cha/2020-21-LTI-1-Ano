@@ -1,0 +1,70 @@
+<!--ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24-->
+
+<!DOCTYPE html>
+<html lang="PT">
+
+    <head>
+        <meta charset="UTF-8"/>
+
+        <title>Catch'em All!</title>
+        <link rel="icon" href="images/pikachu.png" type="image">
+
+        <!-- Viewports -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Páginas CSS -->
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/comum.css">
+
+        <!-- Páginas JS -->
+        <script src="scripts/auxiliares.js"></script>  
+        <script src="scripts/index.js"></script>  
+        <script src="scripts/nav.js"></script>  
+    </head> 
+
+    <body>
+        <div id="content_index"> <!-- Background exterior -->
+
+            <div id="container_index"> <!-- Caixa interior com os conteúdos -->
+
+                <div id="navegacao"> <!-- Navegação -->
+                    <nav>
+                        <div class="nav_topo" id="nav_t"> 
+                            <a id="pagDef">Definições</a> 
+                            <a id ="pagPoke">Pokédex</a>
+                            <a id="pagCria">Criadores</a>
+                            <a id ="pagIns">Instruções</a>
+                            <a id ="pagHome" class="ativo">Home</a>
+                            <a href="javascript:void(0);" class="icon" id="abreMenu"><img src="images/menu.png" class="menu" alt="imagem de abertura do menu de navegação"></a> <!--Para abrir o menu-->
+                        </div>
+                    </nav>
+                </div>
+            
+                <div id="informacao_index"> <!-- Caixa com titulo, texto, botão -->
+                    <div class="textos"> <!-- Titulo e parágrafo -->
+                        <img class="titulo_jogo" src="images/titulo.png" alt="Título do jogo escrito na fonte do jogo Pokémon original - Catch'em All!">
+                        
+                        <p class="texto_apresentacao">Achas que tens o que é preciso para ser um mestre Pokémon?<br>
+                           Neste jogo podes mostrar o teu talento e ser o mais rápido a apanhá-los todos. Clica já em começar!
+                        </p>
+                    </div>
+
+                    <br> <!-- Break line para haver uma separação entre o texto e o botão -->
+                    
+                    <div id="comecar"> <!-- Botão -->
+                        <a class="botao">Começar</a> 
+                    </div>
+                </div>
+
+                <div id="imagem_index"> <!-- Imagem Pikachu -->
+                    <img class="pokemon_index" src="images/pikachu.png" alt="Pikachu">
+                </div>
+            </div>
+    
+        </div>
+
+    </body>
+            
+</html>
+
+<!-- Nav com base em: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_responsive_navbar_dropdown -->

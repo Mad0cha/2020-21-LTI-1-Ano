@@ -1,0 +1,156 @@
+<!--ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24-->
+
+<!DOCTYPE html>
+<html lang="PT">
+    
+  <head>
+      <meta charset="UTF-8"/>
+
+      <title>Catch'em All!</title>
+      <link rel="icon" href="images/pikachu.png" type="image">
+
+      <!--Viewports-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Páginas CSS -->
+      <link rel="stylesheet" href="styles/comum.css">  
+      <link rel="stylesheet" href="styles/pokedex.css">  
+
+      <!-- Páginas JS -->
+      <script src="scripts/pokedex.js"></script>
+      <script src="scripts/auxiliares.js"></script>
+      <script src="scripts/nav.js"></script>  
+  </head> 
+
+  <body>
+    
+    <div class="cabecalho"> <!-- Navegação -->
+      <div id="navegacao"> 
+        <nav>
+          <div class="nav_topo" id="nav_t"> <!-- Apagar/melhorar o claro no css -->
+            <a id="pagDef">Definições</a> 
+            <a id ="pagPoke" class="ativo">Pokédex</a>
+            <a id="pagCria">Criadores</a>
+            <a id ="pagIns">Instruções</a>
+            <a id ="pagHome">Home</a>
+            <a href="javascript:void(0);" class="icon" id="abreMenu"><img src="images/menu.png" class="menu" alt="imagem de abertura do menu de navegação"></a> <!--Para abrir o menu-->
+          </div>
+        </nav>
+      </div> 
+    </div>
+
+    <div id="content_pokedex"> <!-- Caixa maior com titulo, navegação e o content -->
+
+      <div id="titulo_pokedex">
+        <h1>Pokédex</h1>
+      </div>
+
+      <div id="cartoes">  
+        <div class="caixa_pokedex">   <!-- Caixa com os cartões -->
+
+          <div class="row">    <!-- Linha com Pikachu, Bulbasaur e Charmander -->
+
+            <div class="coluna"> 
+              <div class="cartao">    <!-- Cartão do Pikachu -->
+                <img src="images/pikachu.png" class="personagem" alt="Pikachu">
+                <h2 class="nome_pokedex p">Pikachu</h2>
+                <a id="pika"><p class="mais pokedex">+ Saber mais</p></a>
+              </div>
+            </div>
+            
+            <div class="coluna">
+              <div class="cartao">     <!-- Cartão do Bulbasaur -->
+                  <img src="images/bulb.png" class="personagem" alt="Bulbasaur">
+                  <h2 class="nome_pokedex b">Bulbassaur</h2>
+                  <a id="bulba"><p class="mais pokedex">+ Saber mais</p></a>
+              </div>
+            </div>
+                
+            <div class="coluna">
+
+              <div class="cartao">     <!-- Cartão do Charmander -->
+                  <img src="images/char.png" class="personagem" alt="Charmander">
+                  <h2 class="nome_pokedex c">Charmander</h2>
+                  <a  id="char"><p class="mais pokedex">+ Saber mais</p></a>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">     <!-- Linha com Squirtle, Eevee, Charizard -->
+            
+            <div class="coluna">
+              <div class="cartao">  <!-- Cartão do Squirtle -->
+                <img src="images/squ.png" class="personagem" alt="Squirtle">
+                <h2  class="nome_pokedex s">Squirtle</h2>
+                <a id="squir"><p class="mais pokedex">+ Saber mais</p></a>
+              </div>
+
+          </div>
+              
+          <div class="coluna">
+            
+            <div class="cartao">  <!-- Cartão do Eevee -->
+              <img src="images/eev.png" class="personagem" alt="Eevee">
+              <h2 class="nome_pokedex e">Eevee</h2>
+              <a id="eev"><p class="mais pokedex">+ Saber mais</p></a>
+            </div>
+
+          </div>
+                  
+          <div class="coluna">  
+
+            <div class="cartao">  <!-- Cartão do Charizard -->
+              <img src="images/charizard.png" class="personagem" alt="Charizard">
+              <h2 class="nome_pokedex c_2">Charizard</h2>
+              <a id="chrz"><p class="mais pokedex">+ Saber mais</p></a>
+            </div>
+
+          </div>
+
+          </div>
+                
+            <div class="row"> <!-- Linha com Lugia, Misty e Ash-->
+                
+              <div class="coluna">
+                  
+                <div class="cartao">  <!-- Cartão do  Lugia -->
+                  <img src="images/lugia.png" class="personagem" alt="Lugia">
+                  <h2 class="nome_pokedex l">Lugia</h2>
+                  <a id="lug"><p class="mais pokedex">+ Saber mais</p></a>
+                </div>
+                  
+              </div>
+
+              <div class="coluna">
+
+                <div class="cartao">  <!-- Cartão do Ash -->
+                  <img src="images/ash.png" class="personagem" alt="Ash">
+                  <h2 class="nome_pokedex a">Ash</h2>
+                  <a id="ash"><p class="mais pokedex">+ Saber mais</p></a>
+                </div>
+
+              </div>
+                
+              <div class="coluna">
+
+                <div class="cartao">  <!-- Cartão da Misty -->
+                  <img src="images/misty.png" class="personagem" alt="Misty">
+                  <h2 class="nome_pokedex m">Misty</h2>
+                  <a id="misty"><p class="mais pokedex">+ Saber mais</p></a>
+                </div>
+
+              </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+    
+</html>

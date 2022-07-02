@@ -1,0 +1,95 @@
+/* ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24 */
+
+/* Índice */
+
+/* Background exterior */
+#content_index{
+    width:100%;
+    height:100%;
+
+    display: grid;
+    grid-template-columns: 7% auto 7%;
+    grid-template-rows: 10% auto 10%;
+}
+
+/* Caixa interior com os conteúdos */
+#container_index{
+    grid-column: 2;
+    grid-row: 2;
+  
+    background-image: url("../images/fundo.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius:1.5vh;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgb(0 0 0 / 16%) 0px 30px 60px -30px;
+    
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% auto;
+}
+
+#informacao_index{  /* Caixa com titulo, texto, botão */
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.titulo_jogo{
+    width: 57%;
+    margin-top:18%; 
+    padding:0vh 10vh 0vh 10vh;  /*cima, direita, baixo, esquerda*/
+}
+
+.texto_apresentacao{
+    margin-top:-1%;
+    padding:0vh 10vh 0vh 10vh;  /*cima, direita, baixo, esquerda*/
+}
+
+#comecar{ /* Botao */
+    padding:0vh 10vh 0vh 10vh;
+}
+
+#imagem_index{ /* Imagem do pikachu */
+    grid-column: 2;
+    grid-row: 2;
+
+    padding:0vh 0vh 7vh 0vh;
+}
+
+#imagem_index:hover{
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+}
+
+.pokemon_index{
+    width: 70%;
+    padding:5vh 0vh 0vh 5vh;  /*cima, direita, baixo, esquerda*/
+}
+
+/* Responsivo */
+@media screen and (max-width : 1260px){ 
+
+    #content_index{                             /* Background exterior */
+        grid-template-columns: 0% auto 0%;
+        grid-template-rows: 0% auto 0%;
+    }
+     
+    #container_index{                           /* Caixa interior com os conteúdos */
+        background-size: 300% 100%;
+        grid-template-rows: 5% auto;
+    }
+
+    #navegaçao{                                 
+        grid-column:1 / 3;
+        grid-row: 1;
+    }
+    
+    #informacao_index{
+        grid-column: 1 / 3;
+    }
+    
+    #imagem_index{
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+}

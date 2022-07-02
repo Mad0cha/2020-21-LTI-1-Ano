@@ -1,0 +1,60 @@
+/* ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24 */
+
+/* Caixa interior com os conteúdos */
+
+#container_definicoes{
+    background:#edc951;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius:1.5vh;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgb(0 0 0 / 16%) 0px 30px 60px -30px;
+}
+
+.main { /* Posicionamento e tamanho da caixa interior  */
+    width: 60%;
+    height:70vh;
+    padding: 15px;
+    margin:auto;
+    margin-top:3vh;
+
+    text-align: center;
+}
+
+/*Titulo*/
+h1{
+    margin-top:-2vh;
+}
+
+/* Escala do Som - com base em: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+/* p{
+    margin-left:3.8vh;
+} */
+
+.slider {
+    -webkit-appearance: none;
+    width: 30%;
+    background: #f6f6f6;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+      
+.slider:hover {
+  opacity: 1;
+}      
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3vh;
+  height: 3vh;
+  background: #eca923;
+}
+
+/* Responsivo */
+@media screen and (max-width: 600px){
+    .main{
+        width: 90%;
+    }
+}

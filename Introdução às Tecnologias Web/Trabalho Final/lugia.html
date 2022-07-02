@@ -1,0 +1,90 @@
+<!--ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24-->
+
+<!DOCTYPE html>
+<html lang="PT">
+    
+  <head>
+        <meta charset="UTF-8"/>
+
+        <title>Catch'em All!</title>
+        <link rel="icon" href="images/pikachu.png" type="image">
+
+        <!--Viewports-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Páginas CSS-->
+        <link rel="stylesheet" href="styles/comum.css">         
+        <link rel="stylesheet" href="styles/sobre.css">    
+        
+        <!--Páginas JS-->
+        <script src="scripts/auxiliares.js"></script>   
+        <script src="scripts/retroceder.js"></script>    
+
+    </head> 
+
+    <body class="l">
+
+        <div id="content_sobre">    <!-- Background exterior -->
+
+            <!-- Seta para voltar para trás -->
+            <div id="seta">     <!-- Retroceder -->
+                <button ><img src="images/seta.png" class="voltar" alt="Seta para retroceder"></button>
+            </div>
+
+            <div id="caixa_transparente"></div>     <!-- Caixa transparente -->
+    
+            <div id="caixa_branca">     <!-- Caixa com os contúdos -->
+            
+                <div id="nome_sobre">   <!-- Nome do Pokémon e simbolo -->
+                    <h2>Lugia</h2>  
+                    <p><img src="images/psychic_2.jpeg" class ="simbolo" alt="olho azul">Psíquico</p>
+                </div>
+
+                <div id="pokemon">      <!-- Imagem do Pokémon -->
+                    <img src="images/lugia.png" class="imagem_sobre" alt="Lugia">
+                </div>
+            
+                <div id="info">         <!-- Informações : força , hp ,cateogria, habilidades-->
+                    <div>
+                        <p class="atributos l">Força</p>
+                        <p class="sobre">4 pts</p>
+                    </div>
+
+                    <div>
+                        <p class="atributos l">HP</p>
+                        <p class="sobre">10 pts</p>
+                    </div>
+
+                    <div>
+                        <p class="atributos l">Categoria</p>
+                        <p class="sobre">Dragão</p>
+                    </div>
+
+                    <div>
+                        <p class="atributos l">Habilidades</p>
+                        <p class="sobre">Mergulho</p>
+                    </div>
+                </div>
+
+                <div id="apresentacao">     <!-- Fraquezas -->
+                    <h2 class="l">Fraqueza</h2>
+
+                    <div id="fraquezas">
+                        <img src="images/raio.png" alt="raio">
+                    </div>
+
+                    <div id="som">       <!-- Som do Pokémon --> 
+                        <a onclick= play(somLugia);>
+                            <img class="coluna_som" src="images/som.png" alt="Simbolo que representa o som">
+                        </a>
+                    </div>
+            
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

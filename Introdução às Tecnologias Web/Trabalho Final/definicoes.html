@@ -1,0 +1,59 @@
+<!--ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24-->
+
+<!DOCTYPE html>
+<html lang="PT">
+    
+  <head>
+      <meta charset="UTF-8"/>
+
+      <title>Catch'em All!</title>
+      <link rel="icon" href="images/pikachu.png" type="image">
+
+      <!-- Viewport -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <!-- Páginas CSS -->
+      <link rel="stylesheet" type="text/css" href="styles/definicoes.css">
+      <link rel="stylesheet" type="text/css" href="styles/comum.css">
+
+      <!-- Páginas JS -->
+      <script src="scripts/definicoes.js"></script>
+      <script src="scripts/auxiliares.js"></script>
+      <script src="scripts/nav.js"></script>  
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+
+    <div id="navegacao"> <!-- Navegação -->
+      <nav>
+        <div class="nav_topo" id="nav_t"> <!-- Apagar/melhorar o claro no css -->
+          <a id="pagDef" class="ativo">Definições</a> 
+          <a id ="pagPoke">Pokédex</a>
+          <a id="pagCria">Criadores</a>
+          <a id ="pagIns">Instruções</a>
+          <a id ="pagHome">Home</a>
+          <a href="javascript:void(0);" class="icon" id="abreMenu"><img src="images/menu.png" class="menu" alt="imagem de abertura do menu de navegação"></a> <!--Para abrir o menu-->
+        </div>
+      </nav>
+    </div>
+
+    <div class="titulo">    <!-- Titulo -->
+        <h1>Definições</h1>
+    </div>
+
+    <div id="container_definicoes" class="main">   <!-- Caixa interior com o conteúdo -->
+
+      <h2>Definições</h2>
+
+      <h2>Volume</h2>
+      <br> 
+      <h3> Efeitos sonoros </h3>
+      <div class="escolheVolumeSom">
+          <div class="controloDoVolume">
+              <p>0<input class="volume slider" type="range" value="100" min="0" max="100" id="myRange">100</p>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

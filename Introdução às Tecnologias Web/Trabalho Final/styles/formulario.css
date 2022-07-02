@@ -1,0 +1,211 @@
+/* ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24 */
+
+/* Caixa com o conteúdo */
+.container_formulario{
+    background-image: url(../images/fundo.png);
+    background-size: 100%;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 1.5vh;
+
+    width: 60%;
+    max-width: 85%;
+    height: 55%;
+
+    margin: auto;
+    justify-items: center;
+    
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+                'imagem email'
+                'imagem username'
+                'imagem botao';
+}
+
+/* Botão */
+.continuar{
+    grid-area: botao;
+}
+
+/* inputs */
+input{
+    width: 30vh;
+    height: 5vh;
+
+    padding: 2vh;
+
+    font-size: 2.5vh;
+    color: grey; /* Cor de texto quando se escreve */
+
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background: transparent;
+    margin-bottom: 1.5vh;
+    border-bottom: solid white 0.2vh; /* Linha embaixo de cada input */
+}
+
+::placeholder{ /* Côr do texto que fica sempre visível */
+    color:grey;
+}
+
+/* Display */
+.esquerda{
+    grid-area: imagem;
+
+    width: 100%;
+    height: 100%;
+}
+
+.e-mail_login{
+    grid-area: email;
+
+    margin-top: 30%;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.username_login{
+    grid-area: username;
+
+    margin-top: -6.5%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p#erro{
+    /* display: none; */
+    /* display: block;
+    margin-left: 50vh; */
+    display: none;
+    grid-area: username;
+    color: red;
+    margin-top: 5vh;
+    margin-bottom: -7vh;
+    font-size: 2vh;
+}
+
+
+/* Imagem e legenda*/
+img.formulario{
+    width: 100%;
+    height: 100%;
+
+    opacity: 80%;                   /* Filtros para deixar a imagem fosca */
+    filter: blur(1px);
+    -webkit-filter: blur(4px);
+    border: transparent;
+}
+
+p.legenda{                                   /* "Seja bem vindo" */
+    font-size:clamp(0.5vh, 1vh + 2vw, 5vh); /* Propriedade que vem no HTML5 (https://desenvolvimentoparaweb.com/css/textos-responsivos-com-css-clamp/)*/
+    text-align: center;
+
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 15%;
+}
+
+/* Responsivo */
+@media only screen and (max-width: 1024px){
+    
+    /* Caixa com o conteúdo */
+    .container_formulario{
+        background-size: 180% 100%;
+
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% auto auto auto;
+        grid-template-areas: 
+                'imagem'
+                'email'
+                'username'
+                'botao';
+
+        justify-items: center;
+    }
+
+    p.legenda{ /* "Seja bem vindo" */
+        margin-top: 20%;
+        margin-left: 15%;
+
+        font-size: clamp(1vh, 2vh + 2vw, 4vh);
+    }
+    
+    /* Display */
+    .e-mail_login{
+        grid-area: email;
+        margin-top: 10vh;
+    }
+    
+    .username_login{
+        grid-area: username;
+        margin-top: -5vh;
+    }
+
+    /* Botão */
+    .botao{
+        grid-area: botao;
+        margin-top: 1.5vh;
+    }
+
+    p#erro{
+        /* display: none; */
+        /* display: block;
+        margin-left: 50vh; */
+        grid-area: username;
+        
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    /* Caixa com o conteúdo */
+    .container_formulario{
+        background-size: 180% 100%;
+        background-repeat: no-repeat; 
+    }
+
+    /* Inputs */
+    input{
+        width: 15vh;                
+        height: 2.5vh;   
+
+        padding: 1vh;       
+                    
+        font-size: 2vh;
+    }
+
+
+    .e-mail_login{
+        margin-top: 3vh;
+    }
+
+    .username_login{
+        margin-top: 0.75vh;
+    }
+
+    p#erro{
+        font-size: 1.5vh;
+        margin-top:6vh;
+    }
+
+    /* Botão */
+    .botao{
+        padding: 2vh;
+        font-size: 1.5vh;
+    }
+
+    /* "Seja bem vindo" */
+    p.legenda{
+        margin-left: 10%;
+        font-size: clamp(1vh, 1.5vh + 1.5vw, 3.5vh);
+    }
+}
+

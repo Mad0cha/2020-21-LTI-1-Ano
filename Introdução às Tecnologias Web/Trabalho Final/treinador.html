@@ -1,0 +1,66 @@
+<!--ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24-->
+
+<!DOCTYPE html>
+<html lang="PT">
+    
+  <head>
+        <meta charset="UTF-8"/>
+
+        <title>Catch'em All!</title>
+        <link rel="icon" href="images/pikachu.png" type="image">
+
+        <!--Viewports-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Páginas CSS -->
+        <link rel="stylesheet" href="styles/comum.css"> 
+        <link rel="stylesheet" href="styles/treinador.css"> 
+
+        <!-- Páginas JS -->
+        <script src="scripts/treinador.js"></script>
+        <script src="scripts/auxiliares.js"></script>
+    </head> 
+
+    <body>
+
+        <!-- Seta para voltar para trás -->
+        <div id="seta">     <!-- Retroceder -->
+            <button ><img src="images/seta.png" class="voltar" alt="Seta para retroceder"></button>
+        </div>
+
+        <div id="content">  <!-- Caixa exterior -->
+
+            <div id="titulo">
+                <h1>Escolhe o teu Treinador</h1>
+            </div>
+
+            <div id="caixas">   <!-- Caixa interior com o conteúdo -->
+
+                <img id="ashImg" src="images/ash.png" class="imagem_a" alt="Ash">
+
+                <div  class="ash caixa">    <!-- Caixa com o conteúdo do Ash -->
+                    <div id="nome_a">
+                        <button id="ash" value = "ash"><h2 class="nome a">Ash</h2></button> <!-- Nome -->
+                        <p class="atributo_a"><img src="images/bola.png" class="pokebola" alt="Pokebola">Coragem</p>    <!-- Atributo -->
+                        <a id ="maisInfoA" ><p class="mais mais_a">+ Mais características</p></a> <!-- Mais caracteristicas -->
+                    </div>
+                   
+                </div>
+
+                <img id="mistyImg" src="images/misty.png" class="imagem_m" alt="Misty">
+                
+                <div class="misty caixa">   <!-- Caixa com o conteúdo da Misty -->   
+                    <div id="nome_m">
+                        <button id="misty" value = "misty"><h2 class="nome m">Misty</h2></button> <!-- Nome -->
+                        <p class="atributo_m"><img src= "images/bola.png" class="pokebola" alt="Pokebola">Inteligência</p>  <!-- Atributo -->
+                        <a id ="maisInfoM"><p class="mais mais_a"><p class="mais mais_m">+ Mais características</p></a>     <!-- Mais caracteristicas -->
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </body>
+
+</html>

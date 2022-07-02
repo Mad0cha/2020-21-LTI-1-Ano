@@ -1,0 +1,72 @@
+/* ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24 */
+
+.titulo{    /* Posicionamento do titulo */
+    margin-top: -2vh;
+}
+
+.container_dificuldade{ /* Caixa interior com o conteúdo */
+    width: 60%;
+    padding:5vh;
+    margin: auto;
+
+    background-image: url(../images/fundo.png);
+    border-radius: 1.5vh;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+   
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.grid_dificuldade{  /* Display dos botões */
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto ;
+    row-gap: 10vh;
+    grid-template-areas: 
+                'facil'
+                'medio'
+                'dificil';
+}
+
+/* Posicionamento dos botões */
+.facil{
+    grid-area: facil;
+
+    display: block;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+.medio{
+    grid-area: medio;
+
+    display: block;
+    margin: auto;
+}
+
+.dificil{
+    grid-area: dificil;
+
+    display: block;
+    margin: auto;
+    margin-bottom: 13vh;
+}
+
+/* Botão */
+a.botao{
+    border-radius: 10vh;
+    font-size: 4vh;
+}
+
+/* Responsivo */
+@media only screen and (max-width: 350px){
+
+    .container_dificuldade{
+        width: 92%;
+    }
+
+    a.botao{
+        font-size: 3vh;
+    }
+}
+

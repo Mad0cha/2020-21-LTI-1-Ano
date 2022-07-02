@@ -1,0 +1,184 @@
+<!--ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24-->
+
+<!DOCTYPE html>
+<html lang="PT">
+    
+  <head>
+        <meta charset="UTF-8"/>
+
+        <title>Catch'em All!</title>
+        <link rel="icon" href="images/pikachu.png" type="image">
+
+        <!--Viewports-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Página CSS-->
+        <link rel="stylesheet" href="styles/comum.css">
+        <link rel="stylesheet" href="styles/jogo.css">   
+        <link rel="stylesheet" href="styles/definicoes.css"> 
+
+        <!--Página CSS-->
+        <script src="scripts/jogo.js"></script>    
+        <script src="scripts/auxiliares.js"></script>   
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>          
+    </head> 
+
+    <body>
+        <div>
+            <!--O jogo vai-se passar dentro deste div-->
+            <div id="botao_definicoes" class="sidebar">
+                <a id="botao_fechar">&times;</a>
+                <h2 class="side">Definições</h2>
+            
+                <div id="container_definicoes" class="main">   <!-- Caixa interior com o conteúdo -->
+
+                    <h2 class="side">Volume</h2>
+                    <h3> Música de fundo </h3>
+                    <div class="escolheVolumeMusica">
+                        <div class="controloDoVolume">
+                            <p>0<input class="volume slider" id="myRange" type="range" value="100" min="0" max="100" id="myRange">100</p>
+                        </div>
+                    </div>
+                    
+                    <h3> Efeitos sonoros </h3>
+                    <div class="escolheVolumeSom">
+                        <div class="controloDoVolume">
+                            <p>0<input class="volume slider" type="range" value="100" min="0" max="100" id="myRange">100</p>
+                        </div>
+                    </div>
+
+                    <br>
+                    <a id="menuPrincipal">Menu Principal</a>
+                </div>
+            </div>
+
+            <div id="caixa_definicoes">
+                <button id="botao_abrir"><img id = "definicoes" src="images/roda-dentada.png"></button>
+            </div>
+
+            <div class="jogo">
+                <table>
+                    <tr>
+                        <td id="00" ></td>
+                        <td id="01" ></td>
+                        <td id="02" ></td>
+                        <td id="03" ></td>
+                        <td id="04" ></td>
+                        <td id="05" ></td>
+                        <td id="06" ></td>
+                        <td id="07" ></td>
+                        <td id="08" ></td>
+                    </tr>
+                    <tr>
+                        <td id="10" ></td>
+                        <td id="11" ></td>
+                        <td id="12" ></td>
+                        <td id="13" ></td>
+                        <td id="14" ></td>
+                        <td id="15" ></td>
+                        <td id="16" ></td>
+                        <td id="17" ></td>
+                        <td id="18" ></td>
+                    </tr>
+                    <tr>
+                        <td id="20" ></td>
+                        <td id="21" ></td>
+                        <td id="22" ></td>
+                        <td id="23" ></td>
+                        <td id="24" ></td>
+                        <td id="25" ></td>
+                        <td id="26" ></td>
+                        <td id="27" ></td>
+                        <td id="28" ></td>
+                    </tr>
+                    <tr>
+                        <td id="30" ></td>
+                        <td id="31" ></td>
+                        <td id="32" ></td>
+                        <td id="33" ></td>
+                        <td id="34" ></td>
+                        <td id="35" ></td>
+                        <td id="36" ></td>
+                        <td id="37" ></td>
+                        <td id="38" ></td>
+                    </tr>
+                    <tr>
+                        <td id="40" ></td>
+                        <td id="41" ></td>
+                        <td id="42" ></td>
+                        <td id="43" ></td>
+                        <td id="44" ></td>
+                        <td id="45" ></td>
+                        <td id="46" ></td>
+                        <td id="47" ></td>
+                        <td id="48" ></td>
+                    </tr>
+
+                    <tr>
+                        <td id="50" ></td>
+                        <td id="51" ></td>
+                        <td id="52" ></td>
+                        <td id="53" ></td>
+                        <td id="54" ></td>
+                        <td id="55" ></td>
+                        <td id="56" ></td>
+                        <td id="57" ></td>
+                        <td id="58" ></td>
+                    </tr>
+
+                    <tr>
+                        <td id="60" ></td>
+                        <td id="61" ></td>
+                        <td id="62" ></td>
+                        <td id="63" ></td>
+                        <td id="64" ></td>
+                        <td id="65" ></td>
+                        <td id="66" ></td>
+                        <td id="67" ></td>
+                        <td id="68" ></td>
+                    </tr>
+
+                    <tr>
+                        <td id="70" ></td>
+                        <td id="71" ></td>
+                        <td id="72" ></td>
+                        <td id="73" ></td>
+                        <td id="74" ></td>
+                        <td id="75" ></td>
+                        <td id="76" ></td>
+                        <td id="77" ></td>
+                        <td id="78" ></td>
+                    </tr>
+
+                    <tr>
+                        <td id="80" ></td>
+                        <td id="81" ></td>
+                        <td id="82" ></td>
+                        <td id="83" ></td>
+                        <td id="84" ></td>
+                        <td id="85" ></td>
+                        <td id="86" ></td>
+                        <td id="87" ></td>
+                        <td id="88" ></td>
+                    </tr>
+            
+                </table>
+            </div>
+
+            <div id="alerta1" class="alertas">
+                <p>Encontrou um Pokémon, prepare-se para lutar!</p>
+                <button id="btnContinuarBatalha" class="btnContinuar"> Continuar! </button>
+            </div>
+
+            <div id="alerta2" class="alertas">
+                <p>Parabéns concluiu o jogo!</p>
+                <button id="btnContinuarFim" class="btnContinuar"> Continuar! </button>
+            </div>
+
+        </div>
+    </body>
+
+</html>
+
+
+

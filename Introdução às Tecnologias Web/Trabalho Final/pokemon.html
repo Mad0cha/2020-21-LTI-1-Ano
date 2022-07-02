@@ -1,0 +1,90 @@
+<!--ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24-->
+
+<!DOCTYPE html>
+<html lang="PT">
+    
+  <head>
+        <meta charset="UTF-8"/>
+
+        <title>Catch'em All!</title>
+        <link rel="icon" href="images/pikachu.png" type="image">
+
+        <!--Viewports-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Páginas CSS -->
+        <link rel="stylesheet" href="styles/comum.css">  
+        <link rel="stylesheet" href="styles/pokemon.css"> 
+
+        <!-- Páginas JS -->
+        <script src="scripts/pokemon.js"></script> 
+        <script src="scripts/auxiliares.js"></script> 
+    </head> 
+
+    <body>
+        <div id="content_pokemon"> <!-- Background exterior -->
+            
+            <!-- Seta para voltar para trás -->
+            <div id="seta">     <!-- Retroceder -->
+                <button ><img src="images/seta.png" class="voltar" alt="Seta para retroceder"></button>
+            </div>
+
+            <div id="titulo">
+                <h1>Escolhe o teu Pokémon</h1>
+            </div>
+
+            <div id="container_pokemon"> <!-- Caixas com os Pokémons -->
+
+                <div id="pikachu" class="caixa">
+                    <div class="informacao">
+                        <button id="pika" value = "pikachu"><h2 class="nome p">Pikachu</h2></button>
+                        <p class="tipo"><img src="images/raio.png" class ="simbolo" alt = "Simbolo raio">Elétrico</p>
+                        <a id="maisInfoP"><p class="mais">+ Mais características</p></a>
+                        
+                    </div>
+                    <button id="pikaImg" value="pikachu"><img src="images/pikachu.png" class="imagem" alt = "Pikachu"></button>
+                </div>
+
+                <div id="bulbassaur" class="caixa">
+                    <div class="informacao">
+                        <button id="bulba" value = "bulbassaur"><h2 class="nome b">Bulbasaur</h2></button>
+                        <p class="tipo"><img src="images/folha.png" class ="simbolo" alt = "Simbolo relva">Relva</p>
+                        <a id="maisInfoB"><p class="mais">+ Mais características</p></a>
+                    </div>
+                    <button id="bulbaImg" value="bulba"><img src="images/bulb.png" class="imagem" alt = "Bulbasaur"></button>
+                </div>
+                
+                <div id="charmander" class="caixa">
+                    <div class="informacao">
+                        <button id="char" value = "charmander"><h2 class="nome c">Charmander</h2></button>
+                        <p class="tipo"><img src="images/fogo.png" class ="simbolo" alt = "Simbolo fogo">Fogo</p>
+                        <a id="maisInfoC"><p class="mais">+ Mais características</p></a>
+                    </div>
+                    <button id="charImg" value = "charmander"><img src="images/char.png" class="imagem" alt = "Charmander"></button>
+                </div>
+
+                <div id="squirtle" class="caixa">
+                    <div class="informacao">
+                        <button id="squir" value = "squirtle"><h2 class="nome s">Squirtle</h2></button>
+                        <p class="tipo"><img src="images/agua.png" class ="simbolo" alt = "Simbolo água">Água</p>
+                        <a  id="maisInfoS"><p class="mais">+ Mais características</p></a>
+                    </div>
+                    <button id="squirImg" value = "squirtle"><img src="images/squ.png" class="imagem" alt = "Squirtle"></button>
+                </div>
+
+                <div id="eevee" class="caixa">
+                    <div class="informacao">
+                        <button id="eev" value = "eevee" ><h2 class="nome e">Eevee</h2></button>
+                        <p class="tipo"><img src="images/normal.png" class ="simbolo" alt = "Simbolo normal">Normal</p>
+                        <a  id="maisInfoE"><p class="mais">+ Mais características</p></a>
+                    </div>
+                    <button id="eevImg" value = "eevee"><img src="images/eev.png" class="imagem" alt = "Eevee"></button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

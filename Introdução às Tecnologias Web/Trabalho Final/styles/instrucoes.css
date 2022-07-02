@@ -1,0 +1,116 @@
+/* ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24 */
+
+/* Container */
+.container_instrucoes{
+    background:rgb(248, 190, 74);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 1.5vh;
+
+    padding: 1%;
+    margin: 3%;
+}
+
+/* Display */
+.grid_instrucoes{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:  
+        'info inst'
+        'instrucoes video';
+}
+
+ul{
+    text-align: justify;
+}
+
+.info{  /* Informação sobre o jogo */
+    grid-area:info;
+}
+
+.instrucoes{    /* Instruções antes e durante o jogo */    
+    grid-area: instrucoes;
+}
+
+.inst{  /* Instruções pós jogo */
+    grid-area: inst;
+    margin-left: 5%;
+}
+
+.video{   /* Video */
+    grid-area: video;
+    width: auto;
+    height: auto;
+}
+
+.titulo_video{
+    position: relative;
+    text-align: center;
+}
+
+/* Elementos do vídeo */
+p.frase{
+    margin: 5vh;
+    text-align: center;
+}
+
+video{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    object-fit: cover;
+}
+
+/* Responsivo */
+@media only screen and (max-width: 1024px){
+    
+     
+    *{
+        text-align:left;
+    }
+    
+    .body{
+        font-size: 1vh;
+    }
+    
+    /* Display */
+    .grid_instrucoes{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:  
+            'info'
+            'instrucoes'
+            'inst'
+            'video';
+      padding:2vh;
+    }
+
+    .inst{  /* Instruções pós jogo */
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 415px){
+
+    h1{
+        font-size: 4vh;
+    }
+
+    h2{
+        font-size: 2.5vh;
+    }
+
+    h3{
+        font-size: 2vh;
+    }
+
+    body{
+        font-size: 2vh;
+    }
+
+    .instrucoes{
+        padding:3vh;
+    }
+}

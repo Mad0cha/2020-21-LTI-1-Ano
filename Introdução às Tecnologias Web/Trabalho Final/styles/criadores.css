@@ -1,0 +1,99 @@
+/* ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24 */
+
+/* Container */
+.container_criadores{
+    background:rgb(248, 190, 74);
+    border-radius: 1.5vh;
+    background-size: 100% auto;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+    width: 70%;
+    height: 50%;
+    padding: 2vh;
+    
+    text-align: left;
+    margin: auto;
+}
+
+/* Display e formatação das imagens */
+
+.grid_criadores{
+    display: grid;
+    grid-template-columns:auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        'Madalena Romulo Lilia'
+        'Opiniao Opiniao Opiniao';
+}
+
+img.criadores{      /* Formatação das imagens */
+    background: #f6f6f6;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    
+    width: 50%;
+    padding:2.5vh 2.5vh 6vh ;
+    margin-top: 2vh;
+}
+
+/* Posicionamento */
+.Madalena{
+    grid-area: Madalena;
+
+    text-align: center;
+    align-items: center;
+}
+
+.Romulo{
+    grid-area: Romulo; 
+
+    text-align: center;
+    align-items: center;
+}
+
+.Lilia{
+    grid-area: Lilia;
+
+    text-align: center;
+    align-items: center;
+}
+
+/* Formatação dos nomes e números de alunos */
+p.criador{
+    color: black;
+    font-size: 1.75vh;
+    text-align: center;
+
+    position: relative;
+    top: -6vh;
+}
+
+/* Opinião */
+.opiniao{
+    grid-area: Opiniao;
+    text-align: justify;
+
+    padding: 2vh;
+    margin: 3vh; 
+}
+
+/* Responsivo */
+@media only screen and (max-width: 1024px){
+    *{
+        text-align: left;
+    }
+
+    .grid_criadores{
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+            'Madalena'
+            'Romulo'
+            'Lilia'
+            'Opiniao';
+    }
+
+    p.criador{
+        font-size: 1.5vh;
+    }
+}

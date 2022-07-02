@@ -1,0 +1,262 @@
+/* ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24 */
+
+p{  /* Estilo das letras */
+    color:#333333;
+    font-family: monospace;
+    font-size:3vh;
+}
+
+
+.controloDoVolume p {
+    color: #f6f6f6;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 2.5vh;    
+ } 
+
+.container_batalha {    /* Caixa exterior */
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas:
+      ". . ."
+      ". jogo ."
+      ". . .";
+}
+
+.jogo_batalha { /* Caixa interior com os conteúdos */
+    background-image: url('../images/batalha.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 75% 25%;
+    grid-template-areas:
+        "batalha"
+        "botoes";
+
+    grid-area: jogo;
+    height:88vh;
+    
+    border: 3px solid grey;
+    border-radius: 1.5vh;
+    box-shadow: rgb(122 122 122 / 40%) 5px 5px, rgb(79 79 79 / 30%) 10px 10px, rgb(91 91 91 / 20%) 15px 15px, rgb(126 126 126 / 10%) 20px 20px, rgb(178 178 178 / 5%) 25px 25px;
+}
+
+.batalha {  /* Caixa com a batalha */
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-areas:
+    ". . . . . . . . . definicoes"
+      ". vida_adversario vida_adversario vida_adversario . . . . . ."
+      ". . . . adversario adversario . . . ."
+      ". buddy buddy . adversario adversario . . . ."
+      ". buddy buddy . . . vida_buddy vida_buddy vida_buddy .";
+
+    grid-area: batalha;
+}
+  
+.vida{  /* Caixa com a vida dos pokémons */
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius:1vh;
+    
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+    display:flex;
+    justify-content: space-around;
+    font-weight:bold;   
+}
+
+/* Posicionamento da vida dos pokémons */
+.adversario { 
+    grid-area: vida_adversario;
+    margin:-5vh 5vh 7vh -5vh ; 
+}
+
+.buddy { 
+    grid-area: vida_buddy; 
+    margin-bottom:2vh; 
+}
+
+/* Imagem dos pokémons e das definições */
+.imagem_buddy { 
+    grid-area: buddy; 
+}
+
+.imagem_adversario { 
+    grid-area: adversario; 
+}
+
+.definicoes { 
+    grid-area: definicoes;  
+}
+
+/* Botões */
+.botoes {   /* Display e estilo */
+    border-top:3px solid grey;
+    border-radius:0px 0px 1.3vh 1.3vh;
+    background: rgba( 255, 255, 255, 0.65 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+    grid-area: botoes;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas:
+        "ataque botoes_todos";
+}
+
+.botoes_todos { 
+    grid-area: botoes_todos; 
+    margin-top:2vh;
+    justify-content: center;
+
+    display:grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 40% 40%;
+    gap: 2% 2%; 
+    grid-template-areas:
+        ". ."
+        ". .";
+}
+
+.ataque {   /* Botões com os ataques */
+    grid-area: ataque;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "mensagem mensagem ."
+        "continuar continuar .";
+}
+
+/* Parte esquerda dos ataques */
+.mensagem { 
+    grid-area: mensagem;
+    padding:3vh;
+}
+
+.continuar { 
+    grid-area: continuar; 
+}
+
+/* Contador de vida - estilos */
+.contador_vida img{
+    width:3vh;
+}
+
+.contador_vida p{ 
+    font-size:2.3vh;
+}
+
+/* Imagens dos pokémons */
+.imagem_buddy{
+    width:23vh;
+    margin-left:5vh;
+}
+
+.imagem_adversario{
+    width:18vh;
+    margin-left:6vh;
+}
+
+/* Botões com os ataques */
+.botao_ataque{
+    border: 3px solid #888;
+    border-radius: 1vh;
+
+    background:#2d7d1e;
+    color:white;
+
+    font-family: monospace;
+    font-size:2vh;
+    font-weight:bold;
+}
+
+.mensagem{
+    margin-top:-3vh;
+    margin-bottom:-3vh;
+    width:100%;
+}
+
+.continuar{
+    margin-top:-2vh;
+    margin-left:3vh;
+}
+
+.continuar button{
+    padding:2vh;
+}
+
+.botao_ataque:hover {
+    background: #34891a;
+}
+
+.botao_ataque:active {
+    background: #34891a;
+    border-color: #888;
+}
+  
+@media screen and (max-width : 1200px){
+    
+    .jogo_batalha { /* Caixa interior com os conteúdos */
+        grid-column:1 / 4 ;
+        background-size: 150% 100%;
+
+    }
+    .definicoes {
+        grid-column:9;
+    }
+
+    /* Posicionamento da vida dos pokémons */
+    .adversario { 
+        margin-left:0vh; 
+        margin-right:-7vh;
+    } 
+
+    .buddy { 
+        grid-area: vida_buddy; 
+        margin-bottom:2vh; 
+        margin-left:-5vh; 
+        margin-right:-2vh;
+    } 
+
+    /* Imagem dos Pokémons */
+    .imagem_buddy{
+        margin-left:-2.2vh;
+        width:21vh;
+    }
+
+    .imagem_adversario{
+        margin-left:5vh;
+        width: 20vh;
+    }
+
+    /* Vida dos pokémons */
+    .vida{
+        flex-direction:column;
+        padding:2vh;
+    }
+
+    .contador_vida p{ 
+        margin-top:-3vh;
+    }
+
+
+    .botao_ataque{
+       font-size:1.75vh;
+    }
+    
+    .mensagem { 
+    width:140%;
+}
+
+    #mensagem{
+       font-size:2.5vh;
+    }
+}
+

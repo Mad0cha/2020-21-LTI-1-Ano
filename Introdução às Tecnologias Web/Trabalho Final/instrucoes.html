@@ -1,0 +1,96 @@
+<!--ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24-->
+
+<!DOCTYPE html>
+<html lang="PT">
+
+    <head>
+        <meta charset="UTF-8"/>
+
+        <title>Catch'em All!</title>
+        <link rel="icon" href="images/pikachu.png" type="image">
+
+        <!--Viewports-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Páginas CSS -->
+        <link href="styles/instrucoes.css" type="text/css" rel="stylesheet">
+        <link href="styles/comum.css" type="text/css" rel="stylesheet">
+
+        <!-- Páginas JS -->
+        <script src="scripts/auxiliares.js"></script>
+        <script src="scripts/nav.js"></script>  
+    </head>
+
+    <body>
+
+        <div id="navegacao">    <!-- Navegação -->
+            <nav>
+                <div class="nav_topo" id="nav_t"> 
+                    <a id="pagDef">Definições</a> 
+                    <a id ="pagPoke">Pokédex</a>
+                    <a id="pagCria">Criadores</a>
+                    <a id ="pagIns" class="ativo">Instruções</a>
+                    <a id ="pagHome">Home</a>
+                    <a href="javascript:void(0);" class="icon" id="abreMenu"><img src="images/menu.png" class="menu" alt="imagem de abertura do menu de navegação"></a> <!--Para abrir o menu-->
+                </div>
+            </nav>
+        </div>
+        
+        <h1>Instruções</h1>
+
+        <div class="container_instrucoes">      <!-- Caixa com o conteúdo -->
+
+            <div class="grid_instrucoes">
+
+    
+                <section class="info">      <!-- Informação geral sobre o jogo -->
+                    <h2>Sobre o jogo:</h2>
+                    <p>O <b>Pokémon</b> é uma franquia criada por <em>Satoshi Tajiri</em> em 1995.</p>
+                    <p>O objetivo do jogo, é que o jogador, personificado por um treinador (<em>Ash</em> ou <em>Misty</em>), capture o maior número de Pokémons em batalhas emocionantes e que os colecione todos na sua <em>Pokédex</em>.
+                </section>
+                    
+                <section class="instrucoes">  <!-- Intstruções antes e durante o jogo -->
+                    <h2>Como jogar</h2>
+                    <h3>Antes de jogar:</h3>
+                    <ul>
+                        <li>Após clicar no botão "<em>Começar</em>" no menu principal, deves efetuar o login para que a tua pontuação fique registada;</li>
+                        <li>Em seguida deves escolher o Pokémon que mais gostas. Se estiveres indeciso, podes ver algumas informações extra clicando em "<em>+ Mais características</em>".</li>
+                        <li>Faltam só dois passos para começares a jogar, escolheres o treinador com qual te identificas mais e a dificuldade do jogo!</li>
+                        <li>Lembra-te que as tuas escolhas afetam o jogo e que deves escolher as melhores opções como um verdadeiro mestre Pokémon.</li>
+                    </ul>
+
+                    <h3>Durante o jogo: </h3>
+                    <ul>
+                        <li>A movimentação é feita com as setas do teu teclado.</li>
+                        <li>O objetivo é chegar à reta final no menor tempo possível, mas não penses que vai ser assim tão fácil! No caminho terás de 
+                            enfrentar vários Pokémons que terás de derrotar e só podes terminar quando os capturares todos!</li>
+                        <li>Quando encontrares um adversário irás ter de batalhar com ele. Para vencer terás de escolher os melhores ataques e retirar 
+                            a maior quantidade de vida possível ao teu adversário. Quanto mais eficaz for o teu Pokémon contra ele, melhor!</li>
+                        <li>Os ataques são baseados em números aleatórios gerados a partir do lançamento de dados, no entanto cada lançamento tem uma probabilidade diferente para o resultado.</li>
+                    </ul>
+                </section>
+
+                <section class="inst">  <!-- Instruções pós jogo -->
+                    <h3>Após o jogo:</h3>
+                        <ul>
+                            <li>Depois de teres derrotado todos os adversários pelo caminho és oficialmente um <b>Mestre Pokémon!</b></li>
+                            <li>Agora tens apenas que relaxar e verificar a tua pontuação no menu das pontuações!</li>
+                            <li>E como te divertiste, de certeza que vais querer melhorar o teu tempo, por isso, o nosso último conselho é <b>jogares de novo!</b></li>
+                        </ul>
+                </section>
+
+                <div class = "video"> <!-- Video  -->
+                    <p class = frase>Caso não tenhas percebido como jogar, abaixo segue um video tutorial que te vai ajudar!</p>
+                    <h2 class= "titulo_video">Video tutorial:</h2>
+                    <video poster = "images/imagem-video.png" controls = "controls" >
+                        <source src="video/video_pokemon.mp4">
+                    </video>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+    
+</html>

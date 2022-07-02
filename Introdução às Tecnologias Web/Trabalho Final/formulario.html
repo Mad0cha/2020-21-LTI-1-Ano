@@ -1,0 +1,62 @@
+<!--ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24-->
+
+<!DOCTYPE html>
+<html lang="PT">
+    
+  <head>
+        <meta charset="UTF-8"/>
+
+        <title>Catch'em All!</title>
+        <link rel="icon" href="images/pikachu.png" type="image">
+
+        <!--Viewports-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Páginas CSS -->
+        <link href="styles/comum.css" type="text/css" rel="stylesheet">
+        <link href="styles/formulario.css" type="text/css" rel="stylesheet">
+
+        <!-- Páginas JS -->
+        <script src="scripts/formulario.js"></script> 
+        <script src="scripts/auxiliares.js"></script> 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <!-- Seta para voltar para trás -->
+        <div id="seta">  <!-- Retroceder -->
+            <button ><img src="images/seta.png" class="voltar" alt="Seta para retroceder"></button>
+        </div>
+
+        <h1>Regista-te!</h1> 
+
+        <!-- Caixa com o conteúdo -->
+        <form class="container_formulario" id = "frmUtilizador">
+
+            <!-- Conteudo do lado direito -->
+            <input type="text" class="e-mail_login" id="email" name="e-mail" placeholder="E-mail" required>
+    
+            <input type="text" class="username_login" id="username" name="username" placeholder="Username" required>
+
+            <p id="erro"> Os dados não foram inseridos corretamente!</p>
+
+            <div id="continuar"> <!-- Botão -->
+                <button type="submit" id="botaoCont" class="botao"> Seguinte</button> <!-- onclick="window.location.href='pokemon.html'" -->
+            </div>
+                
+            <!-- Conteudo do lado esquerdo  -->
+            <div class="esquerda">
+                <img class = "formulario" src="images/form.png" alt="Imagem de fundo com um conjuto de Pokémons">
+            </div>
+
+            <p class = "legenda">Seja bem-vindo!</p>
+
+        </form>
+
+
+    </body>
+    
+</html>
+

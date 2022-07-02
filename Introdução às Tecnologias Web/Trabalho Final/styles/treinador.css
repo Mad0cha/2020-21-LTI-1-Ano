@@ -1,0 +1,227 @@
+/* ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24 */
+
+/* Display da página */
+#content {
+  display: grid;
+  grid-template-columns: 27% 46% 27%;
+  grid-template-rows: 14% 75% 12%;
+  grid-template-areas:
+    ". titulo ."
+    ". caixa_info ."
+    ". . .";
+}
+
+#titulo { 
+  grid-area: titulo; 
+  margin-top: -6vh;
+}
+
+/* Caixa interior com os conteúdos */
+#caixas {
+  grid-area: caixa_info;
+
+	background:#edc951;
+	border-radius:1.5vh;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 12% 35% 6% 35% 12%;
+  gap: 0px 0px;
+  grid-template-areas: 
+    '. . .'
+    '. ash ash'
+    '. . .'
+    'misty misty .'
+    ' . . .';
+  margin-top: -6vh;
+}
+
+/* Caixa com o conteúdo de informação dos personagens */
+.caixa{
+  background:#f6f6f6;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgb(0 0 0 / 19%) 0px 30px 60px -30px;
+}
+
+/* Posicionamento das caixas das personagens */
+.ash { 
+  grid-area: ash; 
+  border-radius:1.5vh 0vh 0vh 1.5vh;
+}
+
+.misty { 
+  grid-area: misty; 
+  border-radius:0vh 1.5vh 1.5vh 0vh;
+}
+
+.nome{
+	background:transparent;
+}
+
+.nome:hover{ /* Posicionamento do nome do PokÃ©mon */
+	-webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+/* Posicionamento dos nomes das personagens */
+#nome_a { 
+  margin-top:-7vh;
+  margin-left:5vh;
+}
+
+#nome_m { 
+  margin: -7vh;
+  margin-left:23vh;
+  text-align:right;
+  margin-right:5vh;
+}
+
+/* Posicionamento das imagens dos personagens */
+.imagem_a { 
+  grid-column: 3;
+  grid-row: 2;
+  margin-top:-13vh;
+  margin-left:-2vh;
+}
+
+.imagem_m { 
+  grid-column: 1;
+  grid-row: 4;
+  margin-top:-10vh;
+  margin-left:-27vh;
+}
+
+img{
+	width:55vh;
+	z-index:1;
+}
+
+img:hover {   /* Aumentar os PokÃ©mons */
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+/* Nome do personagem - estilo */
+h2{
+	font-size: 10vh;
+	font-weight:800;
+	margin-bottom:-4vh;
+}
+
+/* Estilo do simbolo e do texto  */
+a{
+	text-decoration:none;
+	color:grey;
+}
+
+.pokebola{
+	width:3vh;
+}
+
+p{
+	font-weight:600;
+  color:grey;
+}
+
+/*Mais caracteristicas*/
+.mais{
+	font-size:1.8vh;
+	font-weight:400;
+	margin-top:-2.8vh;
+}
+
+.mais:hover{ /* Repetido, juntar com o outro */
+  color: rgb(160, 160, 160);
+}
+
+/* Responsivo */
+@media screen and (max-width : 1000px){
+
+  /* Display da página */
+  #content {
+    margin-left: 6vh;
+    display: grid;
+    grid-template-columns: 1% 133% 1%;
+    grid-template-rows: 15% 80% 5%;
+    grid-template-areas:
+      ". titulo ."
+      ". caixa_info ."
+      ". . .";
+  }
+
+  #titulo { 
+    grid-area: titulo; 
+    text-align:center; 
+  }
+
+  /* Caixa interior com os conteúdos */
+  #caixas {
+    grid-area: caixa_info;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25% 20% 25% 20% 10%;
+    grid-template-areas: 
+      '. . .'
+      '. ash ash'
+      '. . .'
+      'misty misty .'
+      ' . . .';
+  }
+  
+  /* Posicionamento das caixas das personagens */
+  .ash { 
+    grid-area: ash;
+    margin-top:-7vh;
+    margin-bottom:1vh;
+  }
+  
+  .misty { 
+    grid-area: misty;
+    margin-top:-5vh;
+  }
+  
+  /* Posicionamento dos nomes das personagens */
+  h2{
+    font-size:11vh;
+  }
+  
+  /* Posicionamento das imagens dos personagens */
+  .imagem_a {
+    grid-column:3; 
+    grid-row:1; 
+    margin-top:0vh;
+    margin-left: -10vh;
+  }
+
+  .imagem_m {
+    grid-column:1; 
+    grid-row:3; 
+    margin-top:3vh;
+    margin-left:-10vh;
+  }
+  
+  img{
+    width:40vh;
+  }
+}
+
+/* Responsivo para pequeno ajuste em telemóveis pequenos  */
+@media screen and (max-width : 425px){
+
+  #nome_a { 
+    margin-top:-3vh;
+  }
+
+  #nome_m { 
+    margin-top: -3vh;
+  }
+
+  h2{
+      font-size: 7.5vh;
+  }
+
+  img{
+      width:35vh; 
+  }
+}

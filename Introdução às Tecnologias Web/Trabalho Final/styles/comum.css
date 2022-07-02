@@ -1,0 +1,396 @@
+/* ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24 */
+
+/* BODY -------------------------------------------------------------------------------------------------- */
+
+body{
+  background: #ebb341;                     /* Amarelo mais escuro do fundo de todas as páginas */
+  color: #f6f6f6;
+  font-family: 'Montserrat', sans-serif;     /* Fonte comum para todo o texto de todas as páginas */
+  font-size: 2.5vh;
+}
+
+/* TEXTOS ------------------------------------------------------------------------------------------------ */
+
+/* Headings */
+h1{
+  color:#f6f6f6; 
+  font-size:5vh;
+  text-transform:uppercase; 
+  font-weight:800;  
+  text-align: center;             
+}
+
+h2{ 
+  font-size:3.5vh;
+}
+
+h3{
+  font-size:2.5vh;
+}
+
+/*Links*/
+a{
+  text-decoration: none;
+  color:grey;   
+}
+
+/* Cores dos personagens - Textos e backgrounds */
+
+.a{    /* Ash */                                        
+  color: #d35156;
+  background-color: #d35156;
+}
+
+.m{    /* Misty */
+	color:#80cacf;
+  background-color:#80cacf;
+}
+
+.p{    /* Pikachu */
+  color:#fed347;  
+  background-color:#fed347;
+}
+    
+.b{    /* Bulbassaur */
+	color:#74bb68;
+  background-color:#74bb68;
+}
+
+.c{    /* Charmander */
+	color:#edae5a;
+  background-color:#edae5a;
+}
+
+.c_2{ /* Charizard */
+    color: #e78658;
+    background-color: #e78658;
+}
+
+.s{    /* Squirtle */
+	color:#74c9d7;
+  background:#74c9d7;
+}
+
+.e{    /* Eevee */
+	color:#eeb06f;
+  background:#eeb06f;
+}
+
+.l{    /* Lugia */
+    color:#43538c;
+    background-color:#43538c;
+}
+
+/* IMAGENS ---------------------------------------------------------------------------------------------- */  
+
+/* Símbolos (pokebolas, tipos) */
+.simbolo{      
+	width:3vh;
+}
+
+/* BOTÕES ----------------------------------------------------------------------------------------------- */  
+
+/* Base para os botões do tipo normal */
+.botao{ 
+    color: #edc951;
+    background-color: rgba(255,255,255,0.5); 
+    transition: all .5s ease;                /*Efeito de hover mais suave*/
+    font-size: 2.1vh;
+    font-family: 'Montserrat', sans-serif;   
+    text-transform: uppercase;              
+    text-align: center;
+    line-height: 1;                          /*Espaçamento estre linhas - neste caso faz com que o texto fique melhor no botão*/
+    padding: 2.5vh;
+    border: none;
+    outline: none;
+    border-radius: 3.5vh;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; 
+  }
+  
+  a.botao:hover {                            /*Altera as cores do botão quando se passa o rato sobre ele*/
+    color: #f6f6f6;
+    background-color:#edc951; 
+    cursor: pointer;
+  }
+
+/* NAV -------------------------------------------------------------------------------------------------- */
+
+#navegacao{
+    width:100%;
+    grid-column:1/3;
+    grid-row: 1;
+  }
+  
+.nav_topo {
+    overflow: hidden;
+}
+  
+.nav_topo a {
+  float: right;
+  display: block;
+  color: #f6f6f6;
+  padding: 4vh 3.5vh;
+  font-size: 1.7vh;
+}
+
+.nav_topo a:hover {
+  font-size: 1.73vh;
+  color:white;
+  cursor: pointer;
+}
+
+a.ativo{
+  font-weight:600;
+  font-size:1.73vh;
+}
+
+.nav_topo .icon {
+  display: none;
+}
+  
+@media screen and (max-width: 1200px) {
+
+  .menu{
+    width:4vh;
+  }
+  
+  .nav_topo a {
+    display: none;
+    
+  }
+
+  .nav_topo a.icon {
+    display: block;
+  }
+}
+
+/* Quando se abre o menu */
+@media screen and (max-width: 1200px) {
+  .nav_topo.responsivo {                  /* responsivo = classe acrescentada pelo java script*/
+    position: relative;
+    z-index: 1;
+  }
+
+  .nav_topo.responsivo .icon {            /* Posicionamento do icone da nav */
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .nav_topo.responsivo a {                /* Comportamento quando abre */
+    float: none;
+    display: block;
+    font-size:2vh;
+    text-align: center;
+    background-color: #edc951;
+    }
+}
+
+/* SETA ------------------------------------------------------------------------------------------------- */
+
+#seta .voltar{
+    width:5vh;
+    padding:2vh;
+}
+
+/* Definições ------------------------------------------------------------------------------------------------- */
+
+#definicoes{
+  width:4vh;
+  padding:2vh;
+  float:right;
+}
+
+/* Botões -------------------------------------------------------------------------------------------- */
+
+button{
+  border: none;
+  background: transparent;
+}
+
+button:hover{
+  cursor: pointer;
+
+}
+
+.btnContinuar{
+  position: absolute;
+  bottom: 1vh;
+  right:4%;
+}
+
+#btnContinuar:hover{
+  color:grey;
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+/* Alertas -------------------------------------------------------------------------------- */
+
+
+.alertas{
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  border-radius:1.2vh;
+  border: 3px solid grey;
+  color:grey;
+  font-family: monospace;
+  padding: 20px;
+}
+
+#alerta1{
+  left: 33% ;
+}
+
+#alerta2{
+  left: 40%;
+}
+
+#alerta3{
+  left: 27%;
+}
+
+#alerta4{
+  left: 33%;
+}
+
+@media screen and (max-width: 1000px) {
+
+
+  #alerta1{
+    left: 32% ;
+    width: 40vh;
+  }
+  
+  #alerta2{
+    left: 33%;
+  }
+
+  #alerta3{
+    left: 22%;
+  }
+  
+}
+
+@media screen and (max-width: 550px) {
+
+  #alerta1{
+    left: 25% ;
+    width: 40vh;
+  }
+  
+  #alerta2{
+    left: 27%;
+  }
+
+  #alerta3{
+    left: 10%;
+    width: 60vh;
+  }
+
+  #alerta4{
+    left: 15%;
+
+  }
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+  #alerta1{
+    left: 18% ;
+    width: 30vh;
+    top: 8%;
+  }
+  
+  #alerta2{
+    width: 30vh;
+    left: 18%;
+    top: 10%;
+  }
+
+  #alerta3{
+    left: 10%;
+    width: 30vh;
+  }
+
+  #alerta4{
+    left: 15%;
+    width: 30vh;
+
+  }
+
+
+}
+
+/* --------------------------------------------------- */
+.sidebar {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0;
+  right: 0;
+  background-color: rgb(248, 190, 74); 
+  overflow-x: hidden; /* Desativa o scroll horizontal */
+  padding-top: 60px; 
+  transition: 0.5s; /* efeito de transição */
+}
+
+/* Links da sidebar*/
+.sidebar a, .side {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #f6f6f6;
+  display: block;
+  transition: 0.3s;
+  text-align:center;
+}
+
+
+
+/* Posicionamento do botão */
+.sidebar #botao_fechar {
+  position: absolute;
+  top: 0;
+  font-size: 45px;
+}
+
+/* Botão para abrir a sidebar */
+#botao_abrir {
+  cursor: pointer;
+  background-color:transparent;
+  border: none;
+  float:right;
+}
+
+
+
+
+#main {
+  transition: margin-left .5s; /* Efeito de transição */
+  padding: 20px;
+}
+
+/* Responsivo */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+@media screen and (max-width: 400px) {
+
+  table {
+  height:55vh;
+  width:55vh;
+  }
+
+  td {
+   height:0;
+  }
+}
+

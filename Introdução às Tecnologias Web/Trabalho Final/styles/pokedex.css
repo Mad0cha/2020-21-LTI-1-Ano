@@ -1,0 +1,85 @@
+/* ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24 */
+
+/* Caixa maior com titulo, navegação e o content */
+#content_pokedex {
+    display: grid;
+    grid-template-columns: 50% 50fr;
+    grid-template-rows: 15% 12% 73%;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". nav"
+      "titulo titulo"
+      "content content";
+}
+
+/* Display */
+
+#titulo_pokedex { /* Titulo */
+    grid-area: titulo; 
+    text-align:center; 
+    margin-top:4vh;
+}
+
+.cabecalho { /* navegação */ 
+    grid-area: nav; 
+}
+
+#cartoes { /* Cartoões */
+    grid-area: content; 
+}
+
+.cartao:hover {   /* Aumentar os cartões */
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+.coluna {
+    float: left;
+    margin-left:1.5%;
+    width: 30%;
+    padding: 0 10px;
+}
+
+h2.nome_pokedex{    /* Nome do personagem */
+    font-size: 6vh; 
+    background: transparent;
+}
+
+.caixa_pokedex{   /* Caixa com os cartões */
+  
+    margin-top:15vh;
+    position: absolute;
+    left: 50%;
+   
+    transform: translate(-50%);
+    width:90%;
+    
+}
+
+
+.cartao {   /* Estilo dos cartões */
+    padding: 16px;
+    text-align: center;
+    background-color: #f6f6f6;
+    margin-bottom:10%;
+    border-radius:1.5vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.pokedex{   /* Saber mais*/
+    text-align: center;
+}
+
+.personagem{    /* Imagem do personagem */
+    width:30vh;
+    height:30vh;
+}
+
+@media screen and (max-width: 1260px) {
+    
+    .coluna {
+        width: 95%;
+        display: block;
+    }
+}

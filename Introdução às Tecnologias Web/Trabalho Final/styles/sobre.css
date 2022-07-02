@@ -1,0 +1,254 @@
+/* ITW-2020/2021_Grupo:12_Lilia Colisnyc-56949_Madalena Rodrigues-55853_Rómulo Nogueira-56935_PL24 */
+
+/* Atributos comuns a todas as páginas */
+*{
+    color:grey;
+    font-size:2.8vh;
+    font-weight:800;
+}
+
+/* Container e forma da página */
+
+#content_sobre{
+    width:100%;
+    height:100%;
+
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 10% auto 10%;
+}
+
+#seta .voltar{  /* Retroceder */
+    width:5vh;
+    padding:2vh;
+}
+
+#caixa_transparente{    /* Background mais pequeno*/ 
+    background:#f6f6f673;
+    border-radius:1.5vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+    grid-column: 2;
+    grid-row: 2;
+
+    width:90vh;
+    height:70vh; 
+    margin-top:5vh;
+    margin-left:-5vh;
+}
+
+#caixa_branca{  /* Background com conteúdo */
+    background:#f6f6f6;
+    border-radius:1.5vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+    grid-column: 2;
+    grid-row: 2;
+
+    width:80vh;
+    height:80vh; 
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 35% 15% 50%;
+}
+
+/* Formatação das informações */
+
+/*Nome e símbolos*/
+#nome_sobre{    /* Posicionamento do conteúdo */
+    grid-column: 1;
+    grid-row: 1;
+
+    padding:7vh;
+}
+
+#nome_sobre p{  /* Posicionamento do nome do simbolo */
+    margin-top:-5vh;
+}
+
+#nome_sobre h2{ /* Nome do pokémon */
+    font-size:7.4vh;
+}
+
+#nome_sobre p{  /* Nome do símbolo */
+    font-weight:500;
+    text-align: justify;
+    margin-top: -6vh;
+}
+
+/* Imagem do personagem */
+#treinador, #pokemon{
+    grid-column: 2;
+    grid-row: 1;
+
+    margin-left:8vh;
+    margin-top:-3vh;
+}
+
+.imagem_sobre{  /* Imagem do personagem */
+   width:33vh;
+}
+
+.imagem_sobre:hover {   /* Aumentar o personagem */
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+/* Atributos e sobre */
+.atributos{
+    margin-top:5vh; 
+    background:transparent;
+}
+
+#info{  /* Caixa onde estão contidos os atributos */
+    grid-column: 1 / 3;
+    grid-row: 2;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;  /* Propriedade de alinhamento */
+}
+
+.sobre{
+    margin-top:-2vh;
+}
+
+/* Texto informativo dos treinadores e fraquezas dos Pokémons*/
+
+#apresentacao{
+    grid-column: 1 / 3;
+    grid-row: 3;
+
+    padding:7vh;
+    margin-top:-6vh; 
+}
+
+#apresentacao h2{
+    text-align:center;
+    margin-top:4vh;
+    background: transparent;
+}
+
+#apresentacao p{
+    text-align: justify;
+    font-weight: 500;
+}
+
+#fraquezas{
+    width: 100%;
+    height: 6vh;
+
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+
+/* Som */
+
+#som{
+    height:8vh;
+
+    display:flex;
+    justify-content:center;
+    margin-top:5vh;
+}
+
+.coluna_som{
+    width:5vh;
+}
+
+.coluna_som:hover {   /* Aumentar a coluna */
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+/* Responsivo */
+
+@media screen and (max-width : 1000px){
+
+    /* Container e forma da página */
+    #caixa_transparente{
+        display:none;    
+    }
+
+    #caixa_branca{
+        grid-column: 1 / 3;
+
+        width:95vh;
+        height:90vh;
+
+        display:grid;
+        grid-template-rows: 25% 25% 15% 35%;
+    }
+
+    /* Formatação das informações */
+
+    /* Nome e símbolo */  
+    #nome_sobre{    /* Posicionamento do conteúdo */
+        grid-column: 1 / 3;
+        grid-row: 2;
+        
+        text-align:center;
+    }
+
+    #nome_sobre p{  /* Nome do símbolo */
+        text-align:center;
+        margin-top:-7vh;
+    }
+
+    /* Imagem do personagem */
+    #treinador, #pokemon{
+        grid-column: 1 / 3;
+        margin-left:29vh;
+    }
+
+    .imagem_sobre{
+        width:40vh;
+    }
+
+    /* Atributos e sobre */
+    #info{
+        grid-row: 3;
+
+        margin-top:3vh;
+        padding:3vh;
+    }
+
+    #info p{
+        font-size:2.2vh;
+        margin-top:-1vh;
+    }
+
+    /* Texto informativo dos treinadores e fraquezas dos Pokémons */
+    
+    #apresentacao{
+        grid-column: 1 / 3;
+        grid-row: 4;
+
+        padding:5vh;
+        margin-top:-7vh;
+    }
+
+     #apresentacao p{
+       font-size:2.3vh;
+    }
+}
+
+
+@media screen and (max-width : 600px){
+
+    /* Container branco */
+
+    #caixa_branca{
+        width:64vh;
+        height:90vh;
+    }
+
+    /* Imagem do personagem */
+    #treinador, #pokemon{
+        margin-left:14vh;
+    }
+}
