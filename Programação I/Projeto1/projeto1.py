@@ -34,29 +34,29 @@ def gerarPalavras(texto):
 
     return final
   
-  # 2
-  # Vamos agora definir uma função de dissemelhança entre palavras.
-  # Defina a função mmLetras(palavra1, palavra2) que devolve a subtração entre o tamanho da maior
-  # palavra dada e o número de letras iguais nas mesmas posições entre as duas palavras.
-  
-  def mmLetras(palavra1, palavra2):
-    maiorPalavra = palavra1
-    menorPalavra = palavra2
-    if len(palavra2) > len(palavra1):
-        maiorPalavra = palavra2
-        menorPalavra = palavra1
+# 2
+# Vamos agora definir uma função de dissemelhança entre palavras.
+# Defina a função mmLetras(palavra1, palavra2) que devolve a subtração entre o tamanho da maior
+# palavra dada e o número de letras iguais nas mesmas posições entre as duas palavras.
 
-    contador1 = 0
-    iguais = []
+def mmLetras(palavra1, palavra2):
+  maiorPalavra = palavra1
+  menorPalavra = palavra2
+  if len(palavra2) > len(palavra1):
+      maiorPalavra = palavra2
+      menorPalavra = palavra1
 
-    while contador1 < len(menorPalavra):
-        if palavra1[contador1] == palavra2[contador1]:
-            iguais += palavra1[contador1]
-            contador1 += 1
-        else:
-            contador1 += 1
+  contador1 = 0
+  iguais = []
 
-    return len(maiorPalavra) - len(iguais)
+  while contador1 < len(menorPalavra):
+      if palavra1[contador1] == palavra2[contador1]:
+          iguais += palavra1[contador1]
+          contador1 += 1
+      else:
+          contador1 += 1
+
+  return len(maiorPalavra) - len(iguais)
   
   # 3
   # Vamos agora definir outra função de dissemelhança entre palavras.
@@ -87,28 +87,40 @@ def gerarPalavras(texto):
     
     return matriz[len(palavra1)][len(palavra2)]
   
-  #4
-  # Defina a função sugerir que recebe um vocabulário, uma palavra, uma função de distância 
-  # e um inteiro positivo n de sugestões e devolve uma lista de n palavras do vocabulário mais 
-  # próximas da palavra dada, de acordo com a função de distância.
+#4
+# Defina a função sugerir que recebe um vocabulário, uma palavra, uma função de distância 
+# e um inteiro positivo n de sugestões e devolve uma lista de n palavras do vocabulário mais 
+# próximas da palavra dada, de acordo com a função de distância.
 
-  #Como referido, o primeiro critério para entrar na lista final é a distância. No caso de ter
-  # de escolher uma palavra entre duas ou mais palavras com a mesma distância, deve-se escolher 
-  # aquela que tem menor ordem lexicográfica (ou seja, preferir aquela que aparece primeiro no 
-  # vocabulário).
+#Como referido, o primeiro critério para entrar na lista final é a distância. No caso de ter
+# de escolher uma palavra entre duas ou mais palavras com a mesma distância, deve-se escolher 
+# aquela que tem menor ordem lexicográfica (ou seja, preferir aquela que aparece primeiro no 
+# vocabulário).
   
-  # A lista final de sugestões deve aparecer ordenada lexicograficamente. Podem usar a função 
-  # sorted que recebe uma lista de elementos (no nosso caso, strings) e devolve uma lista
-  # ordenada dos seus elementos.
+# A lista final de sugestões deve aparecer ordenada lexicograficamente. Podem usar a função 
+# sorted que recebe uma lista de elementos (no nosso caso, strings) e devolve uma lista
+# ordenada dos seus elementos.
   
-  def sugerir(dic, palavra, distancia, maxSugestoes=5):
+def sugerir(dic, palavra, distancia, maxSugestoes=5):
 
-    resultado = []
+  resultado = []
+
+  for palavraDic in dic:
+
+      resultado.append([palavraDic, distancia(palavra, palavraDic)])
+
+  resultado = sorted(resultado, key= lambda x:(x[1], x[0]) )[0:maxSugestoes]
+  return sorted([palavra[0] for palavra in resultado])
     
-    for palavraDic in dic:
-        
-        resultado.append([palavraDic, distancia(palavra, palavraDic)])
+#5
+# Defina a função corretor que recebe um vocabulário, um texto, uma função de distância e um 
+# inteiro positivo n de sugestões e imprime um relatório com as correções sugeridas.
+# Só devem apresentar sugestões de correção para as palavras que não pertencem ao vocabulário 
+# (por exemplo, "de" não leva sugestões de correção).
 
-    resultado = sorted(resultado, key= lambda x:(x[1], x[0]) )[0:maxSugestoes]
-    return sorted([palavra[0] for palavra in resultado])
-  
+def corretor(dic, texto, distancia, maxSugestoes=5): 
+    
+    listaTexto = (gerarPalavras(texto))
+    for palavraTexto in listaTexto:
+        if palavraTexto not in dic:
+            print('{0} --> {1}'.format(palavraTexto,sugerir(dic, palavraTexto, distancia,maxSugestoes)))
