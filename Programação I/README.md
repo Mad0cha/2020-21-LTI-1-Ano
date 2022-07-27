@@ -7,4 +7,35 @@ Iniciação à aquisição de pensamento computacional através da resolução d
 
 #### Programa
 
-Elementos de linguagens de programação: Expressões e tipos; precedência e associatividade; funções; âmbito; bibliotecas e módulos. Elementos de estruturas de dados: Sequências, tuplos, listas e dicionários; ficheiros. Elementos de metodologia de programação: atribuição e teste booleano; decisão; iteração e recursão; abstração e especificação; clonagem. Elementos de desenvolvimento de software: Leitura e escrita; documentação; asserções e exceções; teste e depuração. Elementos de algoritmia: Busca exaustiva, por aproximação e por bisseção. Elementos de computação: breves noções de computabilidade e máquina de Turing.
+Elementos de linguagens de programação: 
+- Expressões e tipos; 
+- Precedência e associatividade; 
+- Funções; 
+- Âmbito; 
+- Bibliotecas e módulos
+ 
+Elementos de estruturas de dados: 
+- Sequências, 
+- Tuplos, 
+- Listas e dicionários; 
+- Ficheiros
+
+Elementos de metodologia de programação: 
+
+- Atribuição e teste booleano; 
+- Decisão; 
+- Iteração e recursão; 
+- Abstração e especificação; 
+- Clonagem
+
+Elementos de desenvolvimento de software: 
+- Leitura e escrita; 
+- Documentação; 
+- Asserções e exceções; 
+- Teste e depuração
+
+Elementos de algoritmia: 
+- Busca exaustiva, por aproximação e por bisseção. 
+
+Elementos de computação: 
+- breves noções de computabilidade e máquina de Turing.
