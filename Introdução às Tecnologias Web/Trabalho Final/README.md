@@ -1,3 +1,7 @@
+**Colaboradores** (Github username)
+
+RomuloNogueira02
+
 ### AVISOS
 
 - Recomenda-se ter em atenção o volume do computador pois alguns sons são altos, assim como ajustar o som no próprio jogo.
